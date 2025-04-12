@@ -2,24 +2,25 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: '7875426197cf461698809def95960ebf',
+  // TODO: Notionの実際のページIDに置き換える
+  rootNotionPageId: 'c4a8095dad1240c281ecbba9dce6b914',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'Next.js Notion Starter Kit',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
-  author: 'Travis Fischer',
+  name: 'Rioto3 Portfolio',
+  domain: 'rioto3.vercel.app',
+  author: 'Rioto3',
 
   // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  description: 'Rioto3のポートフォリオサイト - 技術記事、プロジェクト、ノート',
 
   // social usernames (optional)
-  twitter: 'transitive_bs',
-  github: 'transitive-bullshit',
-  linkedin: 'fisch2',
+  twitter: 'rioto3_',
+  github: 'Rioto3',
+  // linkedin: '',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
@@ -40,26 +41,27 @@ export default siteConfig({
 
   // map of notion page IDs to URL paths (optional)
   // any pages defined here will override their default URL paths
-  // example:
-  //
-  // pageUrlOverrides: {
-  //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-  //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
-  // }
-  pageUrlOverrides: null,
+  pageUrlOverrides: {
+    '/about': 'c4a8095dad1240c281ecbba9dce6b914',
+    // '/posts': '', // ブログページ用にIDを追加
+    // '/projects': '', // プロジェクトページ用にIDを追加
+  },
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
-  navigationStyle: 'default'
-  // navigationStyle: 'custom',
-  // navigationLinks: [
-  //   {
-  //     title: 'About',
-  //     pageId: 'f1199d37579b41cbabfc0b5174f4256a'
-  //   },
-  //   {
-  //     title: 'Contact',
-  //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
-  //   }
-  // ]
+  navigationStyle: 'custom',
+  navigationLinks: [
+    {
+      title: 'ブログ',
+      pageId: 'c4a8095dad1240c281ecbba9dce6b914' // TODO: 実際のページIDに置き換える
+    },
+    {
+      title: 'プロジェクト',
+      pageId: 'c4a8095dad1240c281ecbba9dce6b914' // TODO: 実際のページIDに置き換える
+    },
+    {
+      title: 'About',
+      pageId: 'c4a8095dad1240c281ecbba9dce6b914' // TODO: 実際のページIDに置き換える
+    }
+  ]
 })
